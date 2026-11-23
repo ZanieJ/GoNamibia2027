@@ -196,9 +196,13 @@ h1 em {
   text-underline-offset: 0.22em;
 }
 
+.moved-purpose {
+  margin-bottom: 1.1rem;
+}
+
 .meta {
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr 1.15fr auto;
+  grid-template-columns: 1.7fr 1fr 1fr auto;
   column-gap: 1.25rem;
   align-items: end;
 }
