@@ -175,8 +175,12 @@ h1 em {
   color: var(--muted);
 }
 
-.site-card {
+.section-head + .site-card {
   margin-top: 1.4rem;
+}
+
+.site-card {
+  margin-top: 1.1rem;
   padding: 1.6rem 1.6rem 1.4rem;
   background: var(--card);
   border: 1px solid var(--line);
