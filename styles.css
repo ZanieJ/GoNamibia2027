@@ -94,6 +94,14 @@ main {
 }
 
 .hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: none;
+}
+
+.hero__copy {
   max-width: 42rem;
 }
 
@@ -132,7 +140,8 @@ h1 em {
 .button {
   display: inline-flex;
   align-items: center;
-  margin-top: 1.8rem;
+  margin-top: 3.4rem;
+  flex: none;
   padding: 0.85rem 1.25rem;
   border-radius: 999px;
   background: var(--navy);
@@ -247,6 +256,14 @@ h1 em {
   main {
     width: min(1080px, calc(100% - 2.5rem));
     padding-top: 2.8rem;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .hero .button {
+    margin-top: 1.8rem;
   }
 
   .meta {
