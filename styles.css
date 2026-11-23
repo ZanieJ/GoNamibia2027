@@ -208,15 +208,27 @@ h1 em {
   text-underline-offset: 0.22em;
 }
 
+.site-card__row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1.15rem;
+}
+
 .meta {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.2rem 0 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0;
 }
 
 .meta div {
-  padding: 0.9rem 0.2rem 0.2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 0;
 }
 
 dt {
@@ -228,13 +240,14 @@ dt {
 }
 
 dd {
-  margin: 0.35rem 0 0;
+  margin: 0;
   font-size: 1.15rem;
   font-weight: 600;
 }
 
 .button--card {
-  margin-top: 0.6rem;
+  margin: 0;
+  flex: none;
 }
 
 .site-footer {
@@ -260,8 +273,17 @@ dd {
     padding-top: 2.8rem;
   }
 
-  .meta {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
+  .site-card__row,
+  .meta,
+  .meta div {
+    display: block;
+  }
+
+  .meta div + div {
+    margin-top: 0.85rem;
+  }
+
+  .button--card {
+    margin-top: 1rem;
   }
 }
