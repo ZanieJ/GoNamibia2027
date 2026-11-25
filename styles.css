@@ -75,18 +75,6 @@ a {
   background: var(--lime);
 }
 
-.header-link {
-  color: var(--navy);
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.header-link:hover,
-.header-link:focus-visible {
-  color: var(--blue);
-}
-
 main {
   width: min(1080px, calc(100% - 12vw));
   margin: 0 auto;
@@ -143,7 +131,7 @@ h1 em {
 .button {
   display: inline-flex;
   align-items: center;
-  margin-top: 3.4rem;
+  margin: 0;
   flex: none;
   padding: 0.85rem 1.25rem;
   border-radius: 999px;
@@ -163,23 +151,6 @@ h1 em {
 
 .sites {
   margin-top: 4.5rem;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-family: Archivo, "Segoe UI", sans-serif;
-  font-size: 2rem;
-  font-weight: 650;
-  letter-spacing: -0.03em;
-}
-
-.section-head p {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
-}
-
-.section-head + .site-card {
-  margin-top: 1.4rem;
 }
 
 .site-card {
@@ -267,10 +238,6 @@ h1 em {
 
   .hero {
     display: block;
-  }
-
-  .hero .button {
-    margin-top: 1.8rem;
   }
 
   .meta {
