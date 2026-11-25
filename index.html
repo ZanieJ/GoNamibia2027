@@ -31,7 +31,7 @@
       <article class="site-card">
         <div class="moved-purpose">
           <p class="meta__label">Purpose</p>
-          <p class="meta__value fit-line">Visibility on NAM project, stacks and allocations</p>
+          <p class="meta__value">Visibility on NAM project, stacks and allocations</p>
         </div>
         <div class="meta">
           <div>
@@ -53,7 +53,7 @@
       <article class="site-card">
         <div class="moved-purpose">
           <p class="meta__label">Purpose</p>
-          <p class="meta__value fit-line">Control and tracking of NAM documents</p>
+          <p class="meta__value">Control and tracking of NAM documents</p>
         </div>
         <div class="meta">
           <div>
@@ -75,7 +75,7 @@
       <article class="site-card">
         <div class="moved-purpose">
           <p class="meta__label">Purpose</p>
-          <p class="meta__value fit-line">NDA certificate registry</p>
+          <p class="meta__value">NDA certificate registry</p>
         </div>
         <div class="meta">
           <div>
@@ -104,17 +104,25 @@
     function fitLines() {
       document.querySelectorAll(".fit-line").forEach(function (el) {
         el.style.fontSize = "";
+        el.style.whiteSpace = "nowrap";
         var size = parseFloat(getComputedStyle(el).fontSize);
         var guard = 0;
-        while (el.scrollWidth > el.clientWidth + 1 && size > 12 && guard < 40) {
+        while (el.scrollWidth > el.clientWidth + 1 && size > 15 && guard < 48) {
           size -= 0.5;
           el.style.fontSize = size + "px";
           guard += 1;
+        }
+        if (el.scrollWidth > el.clientWidth + 1) {
+          el.style.whiteSpace = "normal";
+          el.style.fontSize = "";
         }
       });
     }
     window.addEventListener("load", fitLines);
     window.addEventListener("resize", fitLines);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fitLines);
+    }
   </script>
 </body>
 </html>
