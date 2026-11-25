@@ -31,20 +31,20 @@
       <article class="site-card">
         <div class="moved-purpose">
           <p class="meta__label">Purpose</p>
-          <p class="meta__value">Visibility on NAM project, stacks and allocations</p>
+          <p class="meta__value fit-line">Visibility on NAM project, stacks and allocations</p>
         </div>
         <div class="meta">
           <div>
             <p class="meta__label">Name</p>
-            <p class="meta__value">Operations dashboard</p>
+            <p class="meta__value fit-line">Operations dashboard</p>
           </div>
           <div>
             <p class="meta__label">Administrator</p>
-            <p class="meta__value">ChrisE</p>
+            <p class="meta__value fit-line">ChrisE</p>
           </div>
           <div>
             <p class="meta__label">Owner</p>
-            <p class="meta__value">ChrisE</p>
+            <p class="meta__value fit-line">ChrisE</p>
           </div>
           <a class="button button--card" href="https://public-henna-two-99.vercel.app">Open site</a>
         </div>
@@ -53,20 +53,20 @@
       <article class="site-card">
         <div class="moved-purpose">
           <p class="meta__label">Purpose</p>
-          <p class="meta__value">Control and tracking of documents</p>
+          <p class="meta__value fit-line">Control and tracking of NAM documents</p>
         </div>
         <div class="meta">
           <div>
             <p class="meta__label">Name</p>
-            <p class="meta__value">Nam Specialists</p>
+            <p class="meta__value fit-line">Nam Specialists</p>
           </div>
           <div>
             <p class="meta__label">Administrator</p>
-            <p class="meta__value">Santie</p>
+            <p class="meta__value fit-line">Santie</p>
           </div>
           <div>
             <p class="meta__label">Owner</p>
-            <p class="meta__value">Melissa</p>
+            <p class="meta__value fit-line">Melissa</p>
           </div>
           <a class="button button--card" href="https://nam27specialists.netlify.app/">Open site</a>
         </div>
@@ -77,5 +77,21 @@
   <footer class="site-footer">
     <p>GoGlobal · an extension of <a href="https://goreefers.group/root2go">Root2Go</a> for GoReefers</p>
   </footer>
+  <script>
+    function fitLines() {
+      document.querySelectorAll(".fit-line").forEach(function (el) {
+        el.style.fontSize = "";
+        var size = parseFloat(getComputedStyle(el).fontSize);
+        var guard = 0;
+        while (el.scrollWidth > el.clientWidth + 1 && size > 12 && guard < 40) {
+          size -= 0.5;
+          el.style.fontSize = size + "px";
+          guard += 1;
+        }
+      });
+    }
+    window.addEventListener("load", fitLines);
+    window.addEventListener("resize", fitLines);
+  </script>
 </body>
 </html>

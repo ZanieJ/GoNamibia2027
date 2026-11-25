@@ -179,11 +179,22 @@ h1 em {
   text-transform: uppercase;
 }
 
+.meta > div,
+.moved-purpose {
+  min-width: 0;
+}
+
 .meta__value {
   margin: 0.35rem 0 0;
   color: #fff;
   font-size: 1.15rem;
   font-weight: 600;
+}
+
+.fit-line {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .moved-purpose .meta__value {
