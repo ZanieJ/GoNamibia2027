@@ -110,7 +110,7 @@ h1 em {
 }
 
 .lede {
-  max-width: 40rem;
+  max-width: 56rem;
   margin: 1.25rem 0 0;
   color: var(--muted);
   font-size: 1.05rem;
