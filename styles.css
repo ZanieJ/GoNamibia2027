@@ -159,10 +159,6 @@ h1 em {
   border-radius: 1.15rem;
 }
 
-.site-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-}
-
 .moved-purpose {
   margin-bottom: 1.15rem;
   padding-bottom: 1rem;
@@ -176,20 +172,10 @@ h1 em {
   align-items: end;
 }
 
-.site-card:last-child:nth-child(odd) .meta {
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto;
-}
-
 .button--card {
   grid-column: 1 / -1;
   justify-self: start;
   margin-top: 0.35rem;
-}
-
-.site-card:last-child:nth-child(odd) .button--card {
-  grid-column: auto;
-  justify-self: end;
-  margin-top: 0;
 }
 
 .meta__label {
@@ -266,14 +252,12 @@ h1 em {
     margin-top: 2.25rem;
   }
 
-  .meta,
-  .site-card:last-child:nth-child(odd) .meta {
+  .meta {
     grid-template-columns: 1fr;
     gap: 0.95rem;
   }
 
-  .button--card,
-  .site-card:last-child:nth-child(odd) .button--card {
+  .button--card {
     grid-column: auto;
     justify-self: stretch;
     width: 100%;
