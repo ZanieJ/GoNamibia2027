@@ -138,7 +138,7 @@ h1 em {
 
 .sites {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 3.5rem;
 }
@@ -213,6 +213,12 @@ h1 em {
 .site-footer a {
   color: #fff;
   font-weight: 600;
+}
+
+.fine-print {
+  margin: 0.45rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 860px) {
